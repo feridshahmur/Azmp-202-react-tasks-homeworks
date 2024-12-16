@@ -29,7 +29,7 @@ function App() {
         <Card
           src="https://mcdonalds.az/images/eec170dd5bc3cab3f86f9fabf4531f29.png"
           title="Chicken Wings"
-          desc="Bol baharatlı əsl nahar atışdırmalığı,Dadmağa tələs!"
+          desc="Bol baharatlı əsl nahar atışdırmalığı,dadmağa tələs!"
           price={6.5}
 
         />

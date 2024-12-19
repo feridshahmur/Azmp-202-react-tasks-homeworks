@@ -5,11 +5,12 @@ import Table from './components/Table'
 
 function App() {
   const [allTodos, setAllTodos] = useState([]);
+  const [iscompleted , setIscompleted] = useState([])
 
   return (
     <>
       <h1 className='hasbir'>To Do App</h1>
-      <Form allTodos={allTodos} setAllTodos={setAllTodos} />
+      <Form allTodos={allTodos} setAllTodos={setAllTodos} iscompleted = {iscompleted} setIscompleted = {setIscompleted}/>
       <br />
       <br />
       <br />
@@ -17,7 +18,7 @@ function App() {
       <br />
       <br />
       <br />
-      <Table allTodos={allTodos} setAllTodos={setAllTodos} />
+      <Table allTodos={allTodos} setAllTodos={setAllTodos}  iscompleted = {iscompleted} setIscompleted = {setIscompleted} />
     </>
   )
 }

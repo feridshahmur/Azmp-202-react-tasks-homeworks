@@ -1,21 +1,26 @@
 import { useState } from "react";
 import { nanoid } from "nanoid";
 
-const Form = ({ allTodos, setAllTodos }) => {
-  const [name, setName] = useState(""); // Input üçün state
+const Form = ({ allTodos, setAllTodos , iscompleted , setIscompleted}) => {
+  const [name, setName] = useState(""); 
 
-  // Form submit funksiyası
+  
   const handleSubmit = (event) => {
-    event.preventDefault(); // Default davranışı blokla
+    event.preventDefault(); 
 
-    if (name.trim()) { // Input boş olmadıqda
+    if (name.trim()) { 
       const newTodo = {
-        id: nanoid(), // Yeni id
-        name: name.trim(), // Input dəyəri
+        id: nanoid(),
+        date :new Date(8.64e15).toString(),
+        name: name.trim(), 
+        iscompleted: false
       };
 
-      setAllTodos([...allTodos, newTodo]); // Yeni todo əlavə et
-      setName(""); // Input-u təmizlə
+      setAllTodos([...allTodos, newTodo]); 
+      setName("");
+      setIscompleted(false)
+    }else{
+      window.alert("input isn't free")
     }
   };
 

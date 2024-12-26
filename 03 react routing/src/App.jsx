@@ -4,10 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import AdUsers from './pages/Admin/Users';
 import AdLayout from './components/AdminLayout';
 import Dashboard from './pages/Admin/Dashboard';
-import AdProducts from './pages/Admin/Products';
+
 import ClLayout from './components/ClientLayout';
 import Home from './pages/Client/Home';
 import Menu from './pages/Client/Products';
+import AdminProducts from './pages/Admin/Products';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/admin' element={<AdLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path='/admin/products' element={<AdProducts />} />
+          <Route path='/admin/products' element={<AdminProducts />} />
           <Route path='/admin/users' element={<AdUsers />} />
 
 

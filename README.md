@@ -49,3 +49,5 @@ If you encounter any issues, please open a new [issue](https://github.com/ferids
 
 For any questions or feedback, feel free to reach out:
 - GitHub: [feridshahmur](https://github.com/feridshahmur)
+- Linkedin     <a href="faridfs-azmp202@code.edu.az">Gmail</a>
+- Instagram     <a href="https://www.linkedin.com/in/f%C9%99rid-%C5%9Fahmurov-267aa632a/"></a>

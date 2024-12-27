@@ -1,21 +1,19 @@
+// Ensure that imports are at the very top of the file
 import React, { useState, useEffect } from 'react';
-
 import Box from '@mui/material/Box';
-
 import Grid from '@mui/material/Grid';
 import { Container } from '@mui/material';
 import { Helmet } from 'react-helmet-async';
-
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-
 import Typography from '@mui/material/Typography';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
 import controller from '../../../services';
 import { endpoints } from '../../../services/constants';
+import { BsInfoCircleFill } from "react-icons/bs";
 
+// Your component should also be defined at the top level
 const Menu = () => {
   const [product, setProduct] = useState([]);
 
@@ -67,7 +65,7 @@ const Menu = () => {
                         <Typography variant="body2" sx={{ color: 'red' }}>
                           ${p.price}
                         </Typography>
-                        <BsFillInfoCircleFill style={{ color: 'red', marginLeft: '8px' }} />
+                        <BsInfoCircleFill />
                       </CardActions>
                     </Card>
                   </Grid>
@@ -80,4 +78,5 @@ const Menu = () => {
   );
 };
 
+// `export default` should be at the bottom or top level of the file
 export default Menu;

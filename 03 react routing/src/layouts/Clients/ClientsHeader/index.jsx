@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 const ClHeader = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+      <div className="container container-fluid">
         <a className="navbar-brand" href="#">
           Farid Chef's Menu
         </a>
@@ -26,7 +26,7 @@ const ClHeader = () => {
               Home
             </NavLink>
             <NavLink className="nav-link" to="/menu">
-              Menu
+              Catalog
             </NavLink>
             <NavLink className="nav-link" to="/contact">
               Contact Us

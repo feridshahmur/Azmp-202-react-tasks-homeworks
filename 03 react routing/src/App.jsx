@@ -9,6 +9,8 @@ import ClLayout from './components/ClientLayout';
 import Home from './pages/Client/Home';
 import Menu from './pages/Client/Products';
 import AdminProducts from './pages/Admin/Products';
+import ClContact from './pages/Client/Contact';
+import ProductDetails from './pages/Client/ProductsDetail';
 
 function App() {
 
@@ -23,10 +25,13 @@ function App() {
 
 
         </Route>
-        <Route>
-          <Route path='/' element = {<ClLayout/>} />
-          <Route path='/home' element = {<Home/>} />
-          <Route path='/menu' element = {<Menu/>} />
+        <Route path='/' element = {<ClLayout/>}>
+          <Route index element = {<Home/>} />
+          <Route path='home' element = {<Home/>} />
+          <Route path='menu' element = {<Menu/>} />
+          <Route path='menu/:id' element = {<ProductDetails/>} />
+
+          <Route path='contact' element = {<ClContact/>} />
         </Route>
       </Routes>
     </>

@@ -27,14 +27,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const Dashboard = () => {
-  // Məhsul məlumatları üçün useState hook-u
+  
   const [product, setProduct] = useState([]);
 
-  // Komponent yükləndikdə məhsulları çəkmək üçün useEffect
+  
   useEffect(() => {
     const getProducts = async () => {
       try {
-        // Məhsul məlumatlarını serverdən alırıq
+        
         const productData = await controller.getAllData(endpoints.products);
         setProduct(productData);
       } catch (error) {
@@ -42,28 +42,28 @@ const Dashboard = () => {
       }
     };
 
-    getProducts(); // Məhsul məlumatlarını çəkmək üçün funksiyanı çağırırıq
-  }, []); // [] - Bu, yalnız bir dəfə komponent render edildikdən sonra çalışacaq
-
+    getProducts(); 
+  }, []); 
   return (
    <>
     <Helmet>
-        <title>Feridovic Page</title>
+        <title>Products Page</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
     <div style={{ margin: '3rem' }}>
       <Container>
+        <h1 style={{margin: 50 , color: "orangered" , textAlign : "center"}}>Farid Chef's Menu</h1>
         <Box sx={{ flexGrow: 1 }}>
-          {/* Grid container  */}
-          <Grid container spacing={2}>
-            {/* Hər bir məhsul kartını Grid item olaraq yerləşdiririk */}
+          
+          <Grid container spacing={8}>
+            
             {product &&
               product.map((p) => {
                 return (
-                  <Grid item xs={12} sm={6} md={4} lg={3} key={p.id}>
-                    <Card sx={{ maxWidth: 345 }}>
+                  <Grid item xs={12} sm={6} md={4} lg={4} key={p.id}>
+                    <Card sx={{ maxWidth: 445 , height: 650 }}>
                       <CardMedia
-                        sx={{ height: 140 }}
+                        sx={{ minHeight: 400  }}
                         image={p.thumbnail}
                         title={p.title}
                       />
@@ -76,7 +76,7 @@ const Dashboard = () => {
                         </Typography>
                       </CardContent>
                       <CardActions>
-                        <Typography variant="body2" sx={{ color: 'text.warning' }}>
+                        <Typography variant="body2" sx={{ color: 'red' }}>
                           ${p.price}
                         </Typography>
                       </CardActions>

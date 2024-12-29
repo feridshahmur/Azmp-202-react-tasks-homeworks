@@ -11,6 +11,7 @@ import AdminLayout from './layout/AdminMainHeader'
 import Dashboard from './pages/Client/Home'
 import ProductTable from './pages/Admins/Product'
 import AddProduct from './pages/Admins/AddProduct'
+import Basket from './pages/Client/Basket'
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
           <Route path='product' element={<Product/>}/>
           <Route path='product/:id' element={<ProductDetails/>}/>
           <Route path='wishlist' element={<Wishlist/>}/>
+          <Route path='basket' element={<Basket/>}/>
         </Route>
         <Route path='/admin' element = {<AdminLayout/>}>
           <Route index element={<Dashboard/>}/>

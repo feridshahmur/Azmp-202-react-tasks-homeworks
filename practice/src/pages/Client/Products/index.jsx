@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { FavoritesContext } from "../../../context/WishlistProvider/index";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaRegHeart } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import controller from "../../../services";
+import  { BasketContext } from "../../../context/BasketProvider";
 
 const Product = () => {
   const { toggleFavorites, favorites } = useContext(FavoritesContext);
+  const {basket , addToBasket} = useContext(BasketContext)
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -74,7 +77,7 @@ const Product = () => {
                     <button className="btn btn-primary">Detail</button>
                   </NavLink>
                   <button
-                    onClick={() => toggleFavorites(p)} // Use p instead of c
+                    onClick={() => toggleFavorites(p)} 
                     className="btn btn-danger"
                   >
                     {favorites.find((q) => q.id === p.id) ? (
@@ -83,6 +86,7 @@ const Product = () => {
                       <FaRegHeart />
                     )}
                   </button>
+                  <button onClick={() => { addToBasket(p) }} className="btn btn-outline-warning">Add To Basket</button>
                 </div>
               </div>
             );

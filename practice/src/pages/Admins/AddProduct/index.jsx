@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 const AddProduct = () => {
   const initialValues = {
     image: '', 
@@ -36,7 +36,15 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="container mt-5">
+
+
+    <>
+     <Helmet>
+        <title>Hello World</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
+    
+     <div className="container mt-5">
       <h1>Add Product</h1>
       <Formik
         initialValues={initialValues}
@@ -97,6 +105,8 @@ const AddProduct = () => {
         )}
       </Formik>
     </div>
+    </>
+   
   );
 };
 

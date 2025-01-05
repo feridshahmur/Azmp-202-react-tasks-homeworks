@@ -1,0 +1,88 @@
+.container {
+    margin-top: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: orange;
+    font-weight: 800;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Mərkəzdə yerləşdirmək üçün */
+    gap: 2rem; /* Aralıq üçün */
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 18rem; /* Maksimum eni */
+    margin: 0 auto; /* Mobil cihazlarda mərkəzləşdirmək üçün */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    .card-img-top {
+      height: 12rem; /* Şəkilin hündürlüyü */
+      object-fit: cover; /* Şəkili düzgün qırpmaq üçün */
+    }
+  
+    .card-body {
+      text-align: center;
+      padding: 1rem;
+  
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+  
+      .card-text {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+  
+      button {
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  /* Responsivlik */
+  @media (max-width: 768px) {
+    .row {
+      gap: 1.5rem; /* Mobil cihazlarda daha az boşluq */
+    }
+  
+    .card {
+      max-width: 90%; /* Mobil cihazlarda genişlik azaldılır */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 2rem; /* Kiçik ekranlarda başlıq ölçüsünü kiçiltmək */
+    }
+  
+    .card {
+      max-width: 100%; /* Tam genişlik */
+    }
+  }
+  
